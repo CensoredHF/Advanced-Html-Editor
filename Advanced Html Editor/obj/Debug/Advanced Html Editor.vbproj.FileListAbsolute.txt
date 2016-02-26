@@ -1,0 +1,12 @@
+c:\users\jordan\documents\visual studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\bin\Debug\Advanced Html Editor.exe.config
+c:\users\jordan\documents\visual studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\bin\Debug\Advanced Html Editor.exe
+c:\users\jordan\documents\visual studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\bin\Debug\Advanced Html Editor.pdb
+c:\users\jordan\documents\visual studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\bin\Debug\Advanced Html Editor.xml
+c:\users\jordan\documents\visual studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\obj\Debug\Advanced_Html_Editor.Form1.resources
+c:\users\jordan\documents\visual studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\obj\Debug\Advanced_Html_Editor.Resources.resources
+c:\users\jordan\documents\visual studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\obj\Debug\Advanced Html Editor.vbproj.GenerateResource.Cache
+c:\users\jordan\documents\visual studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\obj\Debug\Advanced Html Editor.exe
+c:\users\jordan\documents\visual studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\obj\Debug\Advanced Html Editor.xml
+c:\users\jordan\documents\visual studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\obj\Debug\Advanced Html Editor.pdb
+C:\Users\Jordan\Documents\Visual Studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\obj\Debug\Advanced_Html_Editor.Settings.resources
+C:\Users\Jordan\Documents\Visual Studio 2013\Projects\Advanced Html Editor\Advanced Html Editor\obj\Debug\Advanced_Html_Editor.Compiler.resources

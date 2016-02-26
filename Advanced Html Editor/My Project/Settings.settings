@@ -1,0 +1,40 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="NewText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt; Heading &lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</Value>
+    </Setting>
+    <Setting Name="Html" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SaveDialog" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="textbox" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;input type="text" id="myText" value="Enter text here"&gt;</Value>
+    </Setting>
+    <Setting Name="image" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;img src="" alt=""&gt;</Value>
+    </Setting>
+    <Setting Name="css" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;link rel="stylesheet" type="text/css" href="theme.css"&gt;</Value>
+    </Setting>
+    <Setting Name="link" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;link href="URL"&gt;</Value>
+    </Setting>
+    <Setting Name="Quotes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">("")</Value>
+    </Setting>
+    <Setting Name="htmlenglish" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;html lang="en-US"&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
