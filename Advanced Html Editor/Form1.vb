@@ -93,6 +93,7 @@ Public Class Form1
         End If
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ToolStripStatusLabel1.Text = "Deez nuts"
         CloseForm = "0"
         LoadColors()
         AddWords()
@@ -378,4 +379,16 @@ Public Class Form1
         End Try
     End Sub
 #End Region
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim count As String
+        count = RichTextBox1.Lines.Count
+        ToolStripStatusLabel1.Text = (count)
+
+
+        Dim mytext As String = RichTextBox1.Text
+        Dim mywords As String() = mytext.Split(New [Char]() {" "c, Chr(10)}, StringSplitOptions.RemoveEmptyEntries)
+
+        ToolStripStatusLabel2.Text = ((mywords.Count.ToString))
+    End Sub
 End Class
