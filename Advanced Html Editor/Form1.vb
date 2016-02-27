@@ -6,6 +6,7 @@ Public Class Form1
     Dim startline As String
     Dim curserline As String
     Dim CloseForm As String = String.Empty
+    Dim css As String = String.Empty
     Dim curserpos As Integer
     Dim word As String
     Dim x As Integer
@@ -390,5 +391,98 @@ Public Class Form1
         Dim mywords As String() = mytext.Split(New [Char]() {" "c, Chr(10)}, StringSplitOptions.RemoveEmptyEntries)
 
         ToolStripStatusLabel2.Text = ((mywords.Count.ToString))
+    End Sub
+
+    Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles ToolStripButton3.Click
+        '// Open Css File + Add New TabPage
+        StyleSheet.Filter = "Cascading Style Sheet (*.css)|*.css|Text File (*.txt)|*.txt*"
+        If StyleSheet.ShowDialog = Windows.Forms.DialogResult.OK _
+        Then
+            TreeView1.Nodes(0).Nodes.Add(New TreeNode(Path.GetFileName(StyleSheet.FileName)))
+            Dim newTab As New TabPage()
+            newTab.Text = Path.GetFileName(StyleSheet.FileName)
+            Dim Textbox As New RichTextBox
+            Textbox.Dock = DockStyle.Fill
+            Textbox.BorderStyle = BorderStyle.None
+            newTab.Name = Path.GetFileName(StyleSheet.FileName)
+            Textbox.Font = New Font("Consolas", 14, FontStyle.Regular)
+            newTab.Controls.Add(Textbox)
+            TabControl1.TabPages.Add(newTab)
+            TabControl1.SelectedTab = newTab
+            Textbox.LoadFile(StyleSheet.FileName, RichTextBoxStreamType.PlainText)
+        End If
+    End Sub
+
+    Private Sub ToolStripButton4_Click(sender As Object, e As EventArgs) Handles ToolStripButton4.Click
+        '// Open Js File + Add New TabPage
+        Javascript.Filter = "Javascript File (*.Js)|*.Js|Text File (*.txt)|*.txt*"
+        If Javascript.ShowDialog = Windows.Forms.DialogResult.OK _
+        Then
+            TreeView1.Nodes(0).Nodes.Add(New TreeNode(Path.GetFileName(Javascript.FileName)))
+            Dim newTab As New TabPage()
+            newTab.Text = Path.GetFileName(Javascript.FileName)
+            Dim Textbox As New RichTextBox
+            Textbox.Dock = DockStyle.Fill
+            Textbox.BorderStyle = BorderStyle.None
+            newTab.Name = Path.GetFileName(Javascript.FileName)
+            Textbox.Font = New Font("Consolas", 14, FontStyle.Regular)
+            newTab.Controls.Add(Textbox)
+            TabControl1.TabPages.Add(newTab)
+            TabControl1.SelectedTab = newTab
+            Textbox.LoadFile(Javascript.FileName, RichTextBoxStreamType.PlainText)
+        End If
+    End Sub
+
+    Private Sub ToolStripButton5_Click(sender As Object, e As EventArgs) Handles ToolStripButton5.Click
+        '// Open Html File + Add New TabPage
+        HtmlFile.Filter = "Html File (*.html)|*.html|Text File (*.txt)|*.txt*"
+        If HtmlFile.ShowDialog = Windows.Forms.DialogResult.OK _
+        Then
+            TreeView1.Nodes(0).Nodes.Add(New TreeNode(Path.GetFileName(HtmlFile.FileName)))
+            Dim newTab As New TabPage()
+            newTab.Text = Path.GetFileName(HtmlFile.FileName)
+            Dim Textbox As New RichTextBox
+            newTab.Name = Path.GetFileName(HtmlFile.FileName)
+            Textbox.Dock = DockStyle.Fill
+            Textbox.BorderStyle = BorderStyle.None
+            Textbox.Font = New Font("Consolas", 14, FontStyle.Regular)
+            newTab.Controls.Add(Textbox)
+            TabControl1.TabPages.Add(newTab)
+            TabControl1.SelectedTab = newTab
+            Textbox.LoadFile(HtmlFile.FileName, RichTextBoxStreamType.PlainText)
+        End If
+    End Sub
+    Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
+        css = Path.GetFileName(StyleSheet.FileName)
+        If e.Action = TreeViewAction.ByMouse Then
+            If e.Node.Text.Equals(css) Then
+                For Each page As TabPage In TabControl1.TabPages
+                    If page.Name = ("excludetab") Then Continue For
+                    If e.Node.Text.Equals(css) Then
+                        If page.Text = (css) Then
+                            Me.TabControl1.SelectedTab = page
+                        End If
+                    End If
+                Next page
+            ElseIf e.Node.Text.Equals(Path.GetFileName(Javascript.FileName)) Then
+                For Each page As TabPage In TabControl1.TabPages
+                    If page.Name = ("excludetab") Then Continue For
+                    If e.Node.Text.Equals(Path.GetFileName(Javascript.FileName)) Then
+                        If page.Text = (Path.GetFileName(Javascript.FileName)) Then
+                            Me.TabControl1.SelectedTab = page
+                        End If
+                    End If
+                Next page
+            ElseIf e.Node.Text.Equals(Path.GetFileName(HtmlFile.FileName)) Then
+                For Each page As TabPage In TabControl1.TabPages
+                    If page.Name = ("excludetab") Then Continue For
+                    If e.Node.Text.Equals(Path.GetFileName(HtmlFile.FileName)) Then
+                        If page.Text = (Path.GetFileName(HtmlFile.FileName)) Then
+                            Me.TabControl1.SelectedTab = page
+                        End If
+                    End If
+                Next page
+            End If
+        End If
     End Sub
 End Class

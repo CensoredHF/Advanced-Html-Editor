@@ -9,6 +9,8 @@
             Form1.ListBox1.BackColor = Color.FromArgb(35, 35, 35)
             Form1.ListBox1.ForeColor = Color.White
             Form1.ToolStrip1.ForeColor = Color.White
+            Form1.TreeView1.BackColor = Color.FromArgb(40, 44, 52)
+            Form1.TreeView1.ForeColor = Color.White
             Form1.LoadColors()
             Dim loc As Int16
             If Form1.RichTextBox1.Text.Contains("Heading") Then
@@ -25,6 +27,8 @@
             Form1.ListBox1.ForeColor = Color.Black
             Form1.RichTextBox1.ForeColor = Color.Black
             Form1.ToolStrip1.ForeColor = Color.Black
+            Form1.TreeView1.ForeColor = Color.Black
+            Form1.TreeView1.BackColor = Color.White
             Form1.LoadColors()
             Dim loc As Int16
             If Form1.RichTextBox1.Text.Contains("Heading") Then
